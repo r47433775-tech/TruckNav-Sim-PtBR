@@ -132,5 +132,16 @@
         "selectMapMod": "Selecionar mod de mapa",
         "defaultMap": "Mapa padrão",
         "resetToDefault": "Restaurar padrão"
+    },
+    "directions": {
+        "depart": "Siga pela rota",
+        "turnLeft": "Vire à esquerda",
+        "turnRight": "Vire à direita",
+        "roundaboutExit": "saída na rotatória",
+        "nthExit": "{n}ª saída",
+        "takeExit": "Pegue a saída",
+        "keepLeft": "Mantenha-se à esquerda",
+        "keepRight": "Mantenha-se à direita",
+        "arrived": "Você chegou"
     }
 }

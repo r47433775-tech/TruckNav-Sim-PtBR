@@ -132,5 +132,16 @@
         "selectMapMod": "Select Map Mod",
         "defaultMap": "Default Map",
         "resetToDefault": "Reset to default"
+    },
+    "directions": {
+        "depart": "Head on Route",
+        "turnLeft": "Turn left",
+        "turnRight": "Turn right",
+        "roundaboutExit": "exit at the roundabout",
+        "nthExit": "{n}{s} exit",
+        "takeExit": "Take the exit",
+        "keepLeft": "Keep left",
+        "keepRight": "Keep right",
+        "arrived": "Arrived"
     }
 }

@@ -101,6 +101,39 @@ const {
 const { activeSettings, settings } = useSettings();
 const { t } = useTranslations();
 
+function instructionText(
+    step: { type: string; exitCount?: number } | undefined,
+): string {
+    if (!step) return t("map.followRoute");
+    switch (step.type) {
+        case "depart":
+            return t("directions.depart");
+        case "left":
+            return t("directions.turnLeft");
+        case "right":
+            return t("directions.turnRight");
+        case "slight-left":
+            return t("directions.keepLeft");
+        case "slight-right":
+            return t("directions.keepRight");
+        case "exit-highway":
+            return t("directions.takeExit");
+        case "destination":
+            return t("directions.arrived");
+        case "roundabout": {
+            const n = step.exitCount ?? 0;
+            if (n <= 0) return t("directions.roundaboutExit");
+            const suffix =
+                n === 1 ? "st" : n === 2 ? "nd" : n === 3 ? "rd" : "th";
+            return t("directions.nthExit")
+                .replace("{n}", String(n))
+                .replace("{s}", suffix);
+        }
+        default:
+            return t("map.followRoute");
+    }
+}
+
 let uiTimer: ReturnType<typeof setTimeout> | null = null;
 let routeTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -533,9 +566,7 @@ const onCancelRoute = () => {
                         "
                         :upcoming-turns="fullRouteDirections"
                         :distance-to-next-turn="nextTurnDistance"
-                        :next-instruction="
-                            fullRouteDirections[1]?.text || t('map.followRoute')
-                        "
+                        :next-instruction="instructionText(fullRouteDirections[1])"
                     />
 
                     <NotificationGeneral
