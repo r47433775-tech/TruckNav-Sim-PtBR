@@ -109,7 +109,8 @@
         "german": "German",
         "slovak": "Slovak",
         "romanian": "Romanian",
-        "korean": "Korean"
+        "korean": "Korean",
+        "portuguese": "Portuguese"
     },
     "uiComponents": {
         "fuelDescription": "Shows your remaining fuel level and it pulses when running low.",
@@ -124,5 +125,12 @@
         "speedTitle": "Speed",
         "topBarDescription": "Hides the whole top bar with drive info.",
         "topBarTitle": "Top Bar"
+    },
+    "gameManager": {
+        "uninstallBaseMap": "Uninstall Base Map",
+        "downloadBaseMap": "Download Base Map",
+        "selectMapMod": "Select Map Mod",
+        "defaultMap": "Default Map",
+        "resetToDefault": "Reset to default"
     }
 }

@@ -57,7 +57,7 @@ function resetColor() {
                         <button
                             @click.prevent="resetColor"
                             class="settings-btn default-color small-reset"
-                            title="Reset to default"
+                            :title="t('gameManager.resetToDefault')"
                         >
                             <Icon name="lucide:refresh-ccw" size="18" />
                             <span>{{ t("common.reset") }}</span>

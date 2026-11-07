@@ -195,7 +195,7 @@ function toggleModPanel() {
                         class="btn nav-btn mod-btn default-color"
                     >
                         <Icon name="lucide:trash-2" size="20" />
-                        <span>Uninstall Base Map</span>
+                        <span>{{ t("gameManager.uninstallBaseMap") }}</span>
                     </button>
                 </div>
             </div>
@@ -213,7 +213,7 @@ function toggleModPanel() {
                     @click.prevent="emit('connected')"
                     class="btn nav-btn success-btn"
                 >
-                    <span>Start Navigation</span>
+                    <span>{{ t("common.startNavigation") }}</span>
                     <Icon name="lucide:map-pinned" size="20" />
                 </button>
             </template>
@@ -239,7 +239,7 @@ function toggleModPanel() {
                         class="btn nav-btn"
                         :disabled="isDownloading"
                     >
-                        <span>Download Base Map</span>
+                        <span>{{ t("gameManager.downloadBaseMap") }}</span>
                         <Icon name="lucide:download" size="20" />
                     </button>
 
@@ -256,13 +256,13 @@ function toggleModPanel() {
             <Transition name="panel-pop">
                 <PopupPanel
                     v-if="isModPanelOpen"
-                    title="Select Map Mod"
+                    :title="t('gameManager.selectMapMod')"
                     @close="toggleModPanel"
                 >
                     <div class="mod-list-container">
                         <div class="mod-item">
                             <div class="mod-info">
-                                <strong>Default Map</strong>
+                                <strong>{{ t("gameManager.defaultMap") }}</strong>
                                 <p>Standard game map (No Mods)</p>
                             </div>
                             <div class="mod-actions">
